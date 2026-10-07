@@ -1,0 +1,34 @@
+kind: eval
+paths:
+  root: data
+  scenes: scenes
+  output: outputs/eval_ovon_val_unseen
+checkpoints:
+  perception: Amazon-FAR/stopwatch-perception-4b
+  policy: Amazon-FAR/stopwatch-policy-2b
+perception:
+  role: perception
+  image_width: 640
+  image_height: 352
+  frame_window: 128
+  distance_bin_edges: [0.5, 1.0, 2.0, 4.0]
+policy:
+  role: policy
+  image_width: 320
+  image_height: 160
+  frame_window: 500
+  distance_bin_edges: [0.5, 1.0, 2.0, 4.0]
+dataset:
+  benchmark: ovon_val_unseen
+  split: val_unseen
+  episodes: eval/ovon_val_unseen/episodes.json.gz
+  expected_population: 2309
+  scene_dataset_config: null
+  instance_viewpoints: protocol/instance_viewpoints/hm3d
+  navmesh_max_climb: 0.1
+  navmesh_include_static_objects: false
+seed: 42
+num_environments: 2
+max_episode_steps: 500
+perception_max_new_tokens: 192
+progress_interval: 25

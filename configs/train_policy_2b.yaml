@@ -1,0 +1,46 @@
+kind: train
+paths:
+  root: data
+  scenes: scenes
+  rgb: rgb
+  output: outputs/train_policy_2b
+model:
+  role: policy
+  model_id: Qwen/Qwen3-VL-2B-Instruct
+  revision: 89644892e4d85e24eaac8bacfd4f463576704203
+  image_width: 320
+  image_height: 160
+  frame_window: 500
+  distance_bin_edges: [0.5, 1.0, 2.0, 4.0]
+data:
+  sources:
+    - {name: ovon, episodes: train/ovon, weight: 0.5}
+    - {name: mp3d, episodes: train/mp3d, weight: 0.3}
+    - {name: hssd, episodes: train/hssd, weight: 0.2}
+  seed: 0
+  num_workers: 16
+  prefetch_factor: 4
+  candidate_episodes: 8
+  terminal_window_probability: 0.25
+  within_class_names_probability: 0.5
+parallel:
+  world_size: 16
+  sequence_parallel_size: 1
+  reference_bins: 16
+  reference_bin_frames: 512
+  group_frame_cap: 512
+optimizer:
+  encoder_lr: 0.00001
+  trunk_lr: 0.00001
+  eps: 0.00001
+  weight_decay: 0.05
+  max_grad_norm: 1.0
+schedule:
+  total_updates: 40000
+  warmup_updates: 1500
+  min_lr_ratio: 0.1
+checkpoint:
+  restart_every_updates: 1000
+  export_every_updates: 5000
+  resume_from: null
+log_interval: 10

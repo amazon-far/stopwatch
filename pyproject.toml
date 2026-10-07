@@ -1,0 +1,65 @@
+[project]
+name = "stopwatch"
+version = "0.1.0"
+description = "StopWatch two-model ObjectNav training and evaluation"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES"]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "numpy>=2.0",
+    "PyYAML>=6.0",
+    "omegaconf>=2.3.0",
+    "gym==0.23.0",
+    "torch>=2.14.1",
+    "torchvision>=0.23.0",
+    "transformers>=5.0.0",
+    "trl>=1.14.1",
+    # Pin this FA4 beta because we patch its backward internals for determinism and verified released weights with it.
+    "flash-attn-4[cu13]==4.0.0b33",
+    "huggingface-hub>=1.0.0",
+    "datasets>=2.20.0",
+    "opencv-python>=4.8.0,<5",
+    "pillow>=12.3.0",
+    "gitpython>=3.1.0",
+    "matplotlib>=3.9.0",
+    "decord>=0.6.0",
+    "pyarrow>=15.0.0",
+    "scipy>=1.15.0",
+    "numpy-quaternion>=2019.3.18.14.33.20",
+    "imageio>=2.37.3",
+    "imageio-ffmpeg>=0.6.0",
+    "safetensors>=0.4.0",
+    "habitat-lab",
+]
+
+[build-system]
+requires = ["setuptools>=80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["stopwatch*"]
+
+[tool.uv.sources]
+habitat-lab = { git = "https://github.com/facebookresearch/habitat-lab.git", rev = "8c403d6645bd320652ff44c2fb5185f6c208c8ab", subdirectory = "habitat-lab" }
+
+[tool.uv]
+environments = ["sys_platform == 'linux' and platform_machine == 'x86_64'"]
+# Habitat-Lab's metadata pins NumPy 1.26.4. The retained runtime uses NumPy 2.
+override-dependencies = ["numpy>=2.0"]
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
+
+[[tool.uv.dependency-metadata]]
+name = "gym"
+version = "0.23.0"
+requires-python = ">=3.7"
+requires-dist = ["numpy>=1.18.0", "cloudpickle>=1.2.0", "importlib-metadata>=4.10.0; python_version < '3.10'", "gym-notices>=0.0.4"]
+
+[[tool.uv.dependency-metadata]]
+name = "habitat-lab"
+version = "0.3.3"
+requires-dist = ["gym>=0.22.0,<0.23.1", "numpy==1.26.4", "numpy-quaternion>=2019.3.18.14.33.20", "attrs>=19.1.0", "opencv-python>=3.3.0", "pickle5; python_version < '3.8'", "hydra-core>=1.2.0", "omegaconf>=2.2.3", "numba>=0.44.0", "imageio>=2.2.0", "imageio-ffmpeg>=0.2.0", "scipy>=1.10.1", "tqdm>=4.0.0"]

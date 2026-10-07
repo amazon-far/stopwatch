@@ -1,0 +1,45 @@
+kind: train
+paths:
+  root: data
+  scenes: scenes
+  rgb: rgb
+  output: outputs/train_perception_4b
+model:
+  role: perception
+  model_id: Qwen/Qwen3-VL-4B-Instruct
+  revision: ebb281ec70b05090aa6165b016eac8ec08e71b17
+  image_width: 640
+  image_height: 352
+  frame_window: 128
+  distance_bin_edges: [0.5, 1.0, 2.0, 4.0]
+data:
+  sources:
+    - {name: ovon, episodes: train/ovon, weight: 0.5}
+    - {name: mp3d, episodes: train/mp3d, weight: 0.4}
+    - {name: hssd, episodes: train/hssd, weight: 0.1}
+  seed: 0
+  num_workers: 16
+  prefetch_factor: 4
+  candidate_episodes: 4
+  within_class_names_probability: 0.5
+parallel:
+  world_size: 64
+  sequence_parallel_size: 2
+  reference_bins: 64
+  reference_bin_frames: 128
+  group_frame_cap: 256
+optimizer:
+  encoder_lr: 0.00001
+  trunk_lr: 0.00001
+  eps: 0.00001
+  weight_decay: 0.05
+  max_grad_norm: 1.0
+schedule:
+  total_updates: 20000
+  warmup_updates: 600
+  min_lr_ratio: 0.1
+checkpoint:
+  restart_every_updates: 600
+  export_every_updates: 5000
+  resume_from: null
+log_interval: 10

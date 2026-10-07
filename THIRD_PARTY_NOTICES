@@ -1,0 +1,16 @@
+Third-party notices
+
+Original StopWatch code is licensed under Apache 2.0. The notices below
+apply to the identified upstream components and their adaptations.
+
+verl
+
+Source https://github.com/volcengine/verl/blob/main/verl/utils/seqlen_balancing.py
+Component Karmarkar-Karp window partitioning in stopwatch/data/batching.py
+Copyright 2024 Bytedance Ltd. and/or its affiliates
+Copyright 2026 Amazon.com, Inc. or its affiliates.
+Modification note. The port uses unequal-size partitions and preserves reference
+window loss coefficients. Original copyright and license headers remain in that
+module.
+
+Licensed under the Apache License, Version 2.0. See LICENSE for the full text.
