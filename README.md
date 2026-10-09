@@ -3,7 +3,7 @@
 <h1 align="center"><img src="assets/stopwatch_icon.svg" alt="StopWatch" height="44" align="top"> StopWatch:<br>Goal Grounding for Object-goal Navigation</h1>
 
 [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b)](https://arxiv.org/abs/XXXX.XXXXX)
-[![Project page](https://img.shields.io/badge/Project-page-8839ef)](https://amazon-far.github.io/stopwatch/)
+[![Project page](https://img.shields.io/badge/Project-page-8839ef)](https://stopwatch-nav.github.io/)
 [![Perception](https://img.shields.io/badge/HF-perception%204B-ffd21e)](https://huggingface.co/Amazon-FAR/stopwatch-perception-4b)
 [![Policy](https://img.shields.io/badge/HF-policy%202B-ffd21e)](https://huggingface.co/Amazon-FAR/stopwatch-policy-2b)
 [![Dataset](https://img.shields.io/badge/HF-dataset-ffd21e)](https://huggingface.co/datasets/Amazon-FAR/stopwatch-data)
