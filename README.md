@@ -10,11 +10,11 @@
 
 [Xinhao Liu](https://gaaaavin.github.io/),
 [Yunsheng Tian](https://www.yunshengtian.com/)<sup>‡</sup>,
-[Yuheng Qiu](http://yuhengqiu.com/),
-[Pieter Abbeel](https://www2.eecs.berkeley.edu/Faculty/Homepages/abbeel.html)<sup>†</sup>,
-[Xi Chen](https://peterchen.us/)<sup>†</sup>,
+[Yuheng Qiu](https://haleqiu.github.io/),
+[Pieter Abbeel](https://people.eecs.berkeley.edu/~pabbeel/)<sup>†</sup>,
+[Xi Chen](https://www.linkedin.com/in/peter-xi-chen)<sup>†</sup>,
 [Guanya Shi](https://www.gshi.me/)<sup>†</sup>,
-[Chen Feng](https://simbaforrest.github.io/)<sup>†</sup>
+[Chen Feng](https://engineering.nyu.edu/faculty/chen-feng)<sup>†</sup>
 
 <sup>‡</sup> Project lead. <sup>†</sup> Equal advising.
 
