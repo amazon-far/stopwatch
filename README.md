@@ -131,14 +131,11 @@ Scene datasets retain their own terms. See [third-party notices](THIRD_PARTY_NOT
 If you use StopWatch, please cite this paper.
 
 ```bibtex
-@misc{liu2026stopwatch,
-  title={{StopWatch}: Goal Grounding for Object-goal Navigation},
-  author={Xinhao Liu and Yunsheng Tian and Yuheng Qiu and Pieter Abbeel and Xi Chen and Guanya Shi and Chen Feng},
-  year={2026},
-  eprint={2610.23841},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  url={https://arxiv.org/abs/2610.23841},
+@article{liu2026stopwatch,
+  title={StopWatch: Goal Grounding for Object-goal Navigation},
+  author={Liu, Xinhao and Tian, Yunsheng and Qiu, Yuheng and Abbeel, Pieter and Chen, Xi and Shi, Guanya and Feng, Chen},
+  journal={arXiv preprint arXiv:2610.23841},
+  year={2026}
 }
 ```
 
