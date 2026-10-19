@@ -2,7 +2,7 @@
 
 <h1 align="center"><img src="assets/stopwatch_icon.svg" alt="StopWatch" height="44" align="top"> StopWatch:<br>Goal Grounding for Object-goal Navigation</h1>
 
-[![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b)](https://arxiv.org/abs/XXXX.XXXXX)
+[![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b)](https://arxiv.org/abs/2610.23841)
 [![Project page](https://img.shields.io/badge/Project-page-8839ef)](https://stopwatch-nav.github.io/)
 [![Perception](https://img.shields.io/badge/HF-perception%204B-ffd21e)](https://huggingface.co/Amazon-FAR/stopwatch-perception-4b)
 [![Policy](https://img.shields.io/badge/HF-policy%202B-ffd21e)](https://huggingface.co/Amazon-FAR/stopwatch-policy-2b)
@@ -128,7 +128,19 @@ Scene datasets retain their own terms. See [third-party notices](THIRD_PARTY_NOT
 
 ## Citation
 
-Citation will be added after the arXiv release.
+If you use StopWatch, please cite this paper.
+
+```bibtex
+@misc{liu2026stopwatch,
+  title={{StopWatch}: Goal Grounding for Object-goal Navigation},
+  author={Xinhao Liu and Yunsheng Tian and Yuheng Qiu and Pieter Abbeel and Xi Chen and Guanya Shi and Chen Feng},
+  year={2026},
+  eprint={2610.23841},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2610.23841},
+}
+```
 
 ## Acknowledgements
 
