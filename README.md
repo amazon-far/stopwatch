@@ -160,13 +160,3 @@ We build on [Habitat-sim](https://github.com/facebookresearch/habitat-sim),
 * [Qwen-RobotNav Technical Report: A Scalable Navigation Model Designed for an Agentic Navigation System](https://arxiv.org/abs/2606.18112)
 * [Embodied Navigation Foundation Model](https://pku-epic.github.io/NavFoM-Web/)
 * [OmniNav: A Unified Framework for Prospective Exploration and Visual-Language Navigation](https://arxiv.org/abs/2509.25687)
-
-## Star history
-
-<a href="https://star-history.com/#amazon-far/stopwatch&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=amazon-far/stopwatch&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=amazon-far/stopwatch&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=amazon-far/stopwatch&type=Date" />
- </picture>
-</a>
